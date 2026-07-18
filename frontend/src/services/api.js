@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-baseURL: "https://multisupport-ai.onrender.com ",
+baseURL: "https://multisupport-ai.onrender.com",
 });
 
 // Request Interceptor: Attach token to every request

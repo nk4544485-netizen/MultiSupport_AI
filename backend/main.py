@@ -7,6 +7,12 @@ from app.api.dashboard import router as dashboard_router
 from app.api.document import router as document_router
 from app.api.websocket import router as websocket_router
 
+app = FastAPI(
+    title="MultiSupport AI Backend",
+    version="1.0.0",
+    description="AI Powered Multi-Agent Customer Support System"
+)
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[

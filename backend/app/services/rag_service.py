@@ -6,45 +6,70 @@ import chromadb
 import PyPDF2
 import docx
 
-# ==========================
-# ChromaDB Initialization
-# ==========================
+# ======================================
+# Lazy Chroma Initialization
+# ======================================
 
-# Use a temporary database on Render to avoid corrupted persistent metadata
-CHROMA_DATA_PATH = tempfile.mkdtemp()
-
-chroma_client = chromadb.PersistentClient(path=CHROMA_DATA_PATH)
-
-collection = chroma_client.get_or_create_collection(
-    name="knowledge_base"
-)
+_client = None
+_collection = None
 
 
-def extract_text_from_pdf(file_path: str) -> str:
+def get_collection():
+    global _client, _collection
+
+    if _collection is not None:
+        return _collection
+
+    try:
+        db_path = os.path.join(tempfile.gettempdir(), "multisupport_chroma")
+        os.makedirs(db_path, exist_ok=True)
+
+        _client = chromadb.PersistentClient(path=db_path)
+
+        _collection = _client.get_or_create_collection(
+            name="knowledge_base"
+        )
+
+        print("[OK] ChromaDB initialized")
+
+    except Exception as e:
+        print(f"[ERROR] ChromaDB Init Failed: {e}")
+        _collection = None
+
+    return _collection
+
+
+def extract_text_from_pdf(file_path: str):
     text = ""
+
     try:
         with open(file_path, "rb") as f:
             reader = PyPDF2.PdfReader(f)
+
             for page in reader.pages:
                 page_text = page.extract_text()
+
                 if page_text:
                     text += page_text + "\n"
+
     except Exception as e:
-        print(f"PDF extraction error: {e}")
+        print(e)
 
     return text
 
 
-def extract_text_from_docx(file_path: str) -> str:
+def extract_text_from_docx(file_path: str):
     try:
         doc = docx.Document(file_path)
-        return "\n".join(p.text for p in doc.paragraphs)
+        return "\n".join([p.text for p in doc.paragraphs])
+
     except Exception as e:
-        print(f"DOCX extraction error: {e}")
+        print(e)
         return ""
 
 
-def chunk_text(text: str, chunk_size: int = 500, overlap: int = 50):
+def chunk_text(text, chunk_size=500, overlap=50):
+
     words = text.split()
 
     chunks = []
@@ -52,6 +77,7 @@ def chunk_text(text: str, chunk_size: int = 500, overlap: int = 50):
     step = chunk_size - overlap
 
     for i in range(0, len(words), step):
+
         chunk = " ".join(words[i:i + chunk_size])
 
         if chunk.strip():
@@ -60,7 +86,12 @@ def chunk_text(text: str, chunk_size: int = 500, overlap: int = 50):
     return chunks
 
 
-def process_and_index_document(file_path: str, document_id: str, department: str):
+def process_and_index_document(file_path, document_id, department):
+
+    collection = get_collection()
+
+    if collection is None:
+        return
 
     ext = os.path.splitext(file_path)[1].lower()
 
@@ -73,55 +104,51 @@ def process_and_index_document(file_path: str, document_id: str, department: str
 
     if ext == ".json":
 
-        try:
+        with open(file_path, "r", encoding="utf-8") as f:
 
-            with open(file_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
 
-                data = json.load(f)
+        if isinstance(data, list):
 
-            if isinstance(data, list):
+            for item in data:
 
-                for item in data:
+                q = item.get("question", "")
 
-                    question = item.get("question", "")
-                    answer = item.get("answer", "")
+                a = item.get("answer", "")
 
-                    if question and answer:
-                        chunks.append(
-                            f"Question: {question}\nAnswer: {answer}"
-                        )
+                if q and a:
+                    chunks.append(
+                        f"Question: {q}\nAnswer: {a}"
+                    )
 
-            else:
+        else:
 
-                chunks = chunk_text(
-                    json.dumps(data, indent=2)
-                )
-
-        except Exception as e:
-            raise ValueError(f"JSON parsing failed: {e}")
+            chunks = chunk_text(
+                json.dumps(data, indent=2)
+            )
 
     else:
 
         if ext == ".pdf":
+
             text = extract_text_from_pdf(file_path)
 
         elif ext == ".docx":
+
             text = extract_text_from_docx(file_path)
 
         else:
+
             with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
                 text = f.read()
-
-        if not text.strip():
-            raise ValueError("No readable text found.")
 
         chunks = chunk_text(text)
 
     if not chunks:
-        raise ValueError("Nothing to index.")
+        return
 
     ids = [
-        f"{document_id}_chunk_{i}"
+        f"{document_id}_{i}"
         for i in range(len(chunks))
     ]
 
@@ -134,14 +161,25 @@ def process_and_index_document(file_path: str, document_id: str, department: str
         for _ in chunks
     ]
 
-    collection.add(
-        ids=ids,
-        documents=chunks,
-        metadatas=metadatas
-    )
+    try:
+
+        collection.add(
+            ids=ids,
+            documents=chunks,
+            metadatas=metadatas
+        )
+
+    except Exception as e:
+
+        print(f"Index Error : {e}")
 
 
-def delete_document_from_rag(document_id: str):
+def delete_document_from_rag(document_id):
+
+    collection = get_collection()
+
+    if collection is None:
+        return
 
     try:
 
@@ -153,12 +191,15 @@ def delete_document_from_rag(document_id: str):
 
     except Exception as e:
 
-        print(f"Delete error: {e}")
+        print(e)
 
 
-def search_knowledge_base(query: str,
-                          department: str,
-                          top_k: int = 3):
+def search_knowledge_base(query, department, top_k=3):
+
+    collection = get_collection()
+
+    if collection is None:
+        return ""
 
     try:
 
@@ -168,28 +209,31 @@ def search_knowledge_base(query: str,
             where={"department": department} if department else None
         )
 
-        context = []
-
         docs = results.get("documents", [])
 
         metas = results.get("metadatas", [])
 
+        context = []
+
         if docs and docs[0]:
 
-            for i, text in enumerate(docs[0]):
+            for i, doc in enumerate(docs[0]):
 
                 meta = metas[0][i] if metas else {}
 
-                filename = meta.get("filename", "Document")
+                source = meta.get(
+                    "filename",
+                    "Document"
+                )
 
                 context.append(
-                    f"[Source: {filename}]\n{text}"
+                    f"[Source: {source}]\n{doc}"
                 )
 
         return "\n---\n".join(context)
 
     except Exception as e:
 
-        print(f"RAG search error: {e}")
+        print(f"Search Error : {e}")
 
         return ""

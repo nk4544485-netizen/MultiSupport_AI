@@ -1,0 +1,4 @@
+Restart the application before reporting bugs.
+Clear browser cache if the dashboard does not load.
+Reset your password using the Forgot Password option.
+Supported browsers are Chrome, Edge and Firefox.

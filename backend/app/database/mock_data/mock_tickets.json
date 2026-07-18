@@ -1,0 +1,65 @@
+[
+  {
+    "ticket_id": "MS-91214",
+    "department": "Billing",
+    "agent": "Billing",
+    "status": "Open",
+    "priority": "High",
+    "sentiment": "Negative",
+    "timeline": [
+      {
+        "status": "Open",
+        "message": "Ticket created automatically by AI Support routing.",
+        "timestamp": "2026-07-18 04:41:07.822304"
+      }
+    ],
+    "created_at": "2026-07-18 04:41:07.822501",
+    "updated_at": "2026-07-18 04:41:07.822511",
+    "email": "guest_ui801zib@multisupport.ai",
+    "user_message": "i have issue in payment !",
+    "sla_deadline": "2026-07-18 08:41:07.822541",
+    "_id": "mock_1"
+  },
+  {
+    "ticket_id": "MS-40329",
+    "department": "Billing",
+    "agent": "Billing",
+    "status": "Open",
+    "priority": "High",
+    "sentiment": "Negative",
+    "timeline": [
+      {
+        "status": "Open",
+        "message": "Ticket created automatically by AI Support routing.",
+        "timestamp": "2026-07-18 05:03:46.503307"
+      }
+    ],
+    "created_at": "2026-07-18 05:03:46.503365",
+    "updated_at": "2026-07-18 05:03:46.503372",
+    "email": "guest_ui801zib@multisupport.ai",
+    "user_message": "i want refund",
+    "sla_deadline": "2026-07-18 09:03:46.503399",
+    "_id": "mock_2"
+  },
+  {
+    "ticket_id": "MS-83086",
+    "department": "Billing",
+    "agent": "Billing",
+    "status": "Open",
+    "priority": "High",
+    "sentiment": "Negative",
+    "timeline": [
+      {
+        "status": "Open",
+        "message": "Ticket created automatically by AI Support routing.",
+        "timestamp": "2026-07-18 05:21:39.072682"
+      }
+    ],
+    "created_at": "2026-07-18 05:21:39.072828",
+    "updated_at": "2026-07-18 05:21:39.072836",
+    "email": "guest_fx839wiu@multisupport.ai",
+    "user_message": "i have payment issue ",
+    "sla_deadline": "2026-07-18 09:21:39.072857",
+    "_id": "mock_3"
+  }
+]

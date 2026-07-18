@@ -1,0 +1,74 @@
+[
+  {
+    "id": "0246b40e-0072-4092-8dae-63214d55dc99",
+    "filename": "FAQ.pdf",
+    "department": "General",
+    "status": "Indexed",
+    "file_path": "C:\\Users\\nk200\\OneDrive\\project\\MultiSupport-AI\\project\\backend\\app\\uploads\\0246b40e-0072-4092-8dae-63214d55dc99_FAQ.pdf",
+    "uploaded_at": "2026-07-18 08:30:32.524349",
+    "_id": "mock_1"
+  },
+  {
+    "id": "9841deba-1d4c-4a0e-b04d-9d88436e3503",
+    "filename": "Pricing.pdf",
+    "department": "General",
+    "status": "Indexed",
+    "file_path": "C:\\Users\\nk200\\OneDrive\\project\\MultiSupport-AI\\project\\backend\\app\\uploads\\9841deba-1d4c-4a0e-b04d-9d88436e3503_Pricing.pdf",
+    "uploaded_at": "2026-07-18 08:31:03.593741",
+    "_id": "mock_2"
+  },
+  {
+    "id": "b0fed148-a8b8-417d-9042-0e4b6e75e237",
+    "filename": "Refundpolicy.pdf",
+    "department": "General",
+    "status": "Indexed",
+    "file_path": "C:\\Users\\nk200\\OneDrive\\project\\MultiSupport-AI\\project\\backend\\app\\uploads\\b0fed148-a8b8-417d-9042-0e4b6e75e237_Refundpolicy.pdf",
+    "uploaded_at": "2026-07-18 08:31:14.714574",
+    "_id": "mock_3"
+  },
+  {
+    "id": "46276308-1dd4-4c64-9b41-b4fcb98f297c",
+    "filename": "ShippingPolicy.pdf",
+    "department": "General",
+    "status": "Indexed",
+    "file_path": "C:\\Users\\nk200\\OneDrive\\project\\MultiSupport-AI\\project\\backend\\app\\uploads\\46276308-1dd4-4c64-9b41-b4fcb98f297c_ShippingPolicy.pdf",
+    "uploaded_at": "2026-07-18 08:31:29.396636",
+    "_id": "mock_4"
+  },
+  {
+    "id": "00f6d7c9-f1d7-42fb-a309-f3ef11914b91",
+    "filename": "TroubleshootingGuid.pdf",
+    "department": "General",
+    "status": "Indexed",
+    "file_path": "C:\\Users\\nk200\\OneDrive\\project\\MultiSupport-AI\\project\\backend\\app\\uploads\\00f6d7c9-f1d7-42fb-a309-f3ef11914b91_TroubleshootingGuid.pdf",
+    "uploaded_at": "2026-07-18 08:31:38.348079",
+    "_id": "mock_5"
+  },
+  {
+    "id": "434ccd81-7ee3-419b-a31e-c9c91e746404",
+    "filename": "UserManual.pdf",
+    "department": "General",
+    "status": "Indexed",
+    "file_path": "C:\\Users\\nk200\\OneDrive\\project\\MultiSupport-AI\\project\\backend\\app\\uploads\\434ccd81-7ee3-419b-a31e-c9c91e746404_UserManual.pdf",
+    "uploaded_at": "2026-07-18 08:32:00.547165",
+    "_id": "mock_6"
+  },
+  {
+    "id": "4b227d1e-67bf-4674-8b29-c22d5945c969",
+    "filename": "Warranty.pdf",
+    "department": "General",
+    "status": "Indexed",
+    "file_path": "C:\\Users\\nk200\\OneDrive\\project\\MultiSupport-AI\\project\\backend\\app\\uploads\\4b227d1e-67bf-4674-8b29-c22d5945c969_Warranty.pdf",
+    "uploaded_at": "2026-07-18 08:32:14.070071",
+    "_id": "mock_7"
+  },
+  {
+    "id": "a5e34946-96bc-4617-b9cc-33ceeefc8ee8",
+    "filename": "ContactInformations.pdf",
+    "department": "General",
+    "status": "Indexed",
+    "file_path": "C:\\Users\\nk200\\OneDrive\\project\\MultiSupport-AI\\project\\backend\\app\\uploads\\a5e34946-96bc-4617-b9cc-33ceeefc8ee8_ContactInformations.pdf",
+    "uploaded_at": "2026-07-18 08:32:21.948164",
+    "_id": "mock_8"
+  }
+]

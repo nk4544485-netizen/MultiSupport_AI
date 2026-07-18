@@ -1,0 +1,26 @@
+[
+  {
+    "conversation_id": "49450da2-10ff-4ccd-b23f-b2810eb5e66d",
+    "email": "guest_ui801zib@multisupport.ai",
+    "title": "Payment Issue Reported",
+    "created_at": "2026-07-18 04:40:50.043916",
+    "updated_at": "2026-07-18 09:31:36.061692",
+    "_id": "mock_1"
+  },
+  {
+    "conversation_id": "1ee9b0c7-30a8-4e9f-a55f-df361b771c59",
+    "email": "guest_fx839wiu@multisupport.ai",
+    "title": "Payment Issue Resolution Needed",
+    "created_at": "2026-07-18 05:21:38.090490",
+    "updated_at": "2026-07-18 05:22:00.407882",
+    "_id": "mock_2"
+  },
+  {
+    "conversation_id": "404c7d6d-c9bf-469e-9264-817c23929428",
+    "email": "guest_fx839wiu@multisupport.ai",
+    "title": "Company Policy Information Requested",
+    "created_at": "2026-07-18 05:24:37.617924",
+    "updated_at": "2026-07-18 05:24:38.629496",
+    "_id": "mock_3"
+  }
+]

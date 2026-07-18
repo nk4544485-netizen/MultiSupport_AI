@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Guest Customer",
+    "email": "guest_ui801zib@multisupport.ai",
+    "password": "$2b$12$CGJNAiRPZnW1QX9y4AZfZ.c4oCRXiccptNSxF7.2hNsf638GqdeHK",
+    "role": "admin",
+    "_id": "mock_1"
+  },
+  {
+    "name": "Guest Customer",
+    "email": "guest_ui801zib@multisupport.ai",
+    "password": "$2b$12$nORLxZYkvgYUQESz07aZ4uijEcUEudk9EKkDT.gV4e5/yqC44Y4Si",
+    "role": "admin",
+    "_id": "mock_2"
+  },
+  {
+    "name": "Guest Customer",
+    "email": "guest_fx839wiu@multisupport.ai",
+    "password": "$2b$12$0TPbeuf7edQ1d3Mgacdkp.YbX5ivAbSAl7gTom0xjHSJEByNyTEQi",
+    "role": "customer",
+    "_id": "mock_3"
+  },
+  {
+    "name": "NK",
+    "email": "nk4544485@gamil.com",
+    "password": "$2b$12$6qw8ZIRorf5tgn4LNm5u0.GVBFYyggYV5.1W.aGJvUnXu.sxd1gtu",
+    "role": "customer",
+    "_id": "mock_4"
+  }
+]

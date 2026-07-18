@@ -1,0 +1,139 @@
+[
+  {
+    "conversation_id": "49450da2-10ff-4ccd-b23f-b2810eb5e66d",
+    "email": "guest_ui801zib@multisupport.ai",
+    "agent": "General",
+    "ticket": null,
+    "user_message": "hi",
+    "ai_reply": "Hello. How can I assist you today? If you have any questions or need help with something, feel free to ask and I'll do my best to help. Our support is available Monday to Friday, 9 AM to 6 PM, and you can reach us through email or live chat.",
+    "confidence_score": 100,
+    "timestamp": "2026-07-18 04:58:48.309123",
+    "_id": "mock_1"
+  },
+  {
+    "conversation_id": "49450da2-10ff-4ccd-b23f-b2810eb5e66d",
+    "email": "guest_ui801zib@multisupport.ai",
+    "agent": "Billing",
+    "ticket": {
+      "ticket_id": "MS-40329",
+      "department": "Billing",
+      "agent": "Billing",
+      "status": "Open",
+      "priority": "High",
+      "sentiment": "Negative",
+      "timeline": [
+        {
+          "status": "Open",
+          "message": "Ticket created automatically by AI Support routing.",
+          "timestamp": "2026-07-18 05:03:46.503307"
+        }
+      ],
+      "created_at": "2026-07-18 05:03:46.503365",
+      "updated_at": "2026-07-18 05:03:46.503372",
+      "email": "guest_ui801zib@multisupport.ai",
+      "user_message": "i want refund",
+      "sla_deadline": "2026-07-18 09:03:46.503399"
+    },
+    "user_message": "i want refund",
+    "ai_reply": "I'd be happy to help you with your refund. Refunds are processed within 5-7 business days. To initiate the refund process, could you please provide me with your order or invoice number? Additionally, please let me know the reason for the refund so I can assist you better.\n\nIf you're not sure about the order or invoice number, you can also find the invoices in your customer dashboard.\n\nPlease note that you can cancel your subscriptions anytime, and I can assist you with that as well if needed.\n\nLet me know how I can further assist you.",
+    "confidence_score": 90,
+    "timestamp": "2026-07-18 05:03:46.509636",
+    "_id": "mock_2"
+  },
+  {
+    "conversation_id": "1ee9b0c7-30a8-4e9f-a55f-df361b771c59",
+    "email": "guest_fx839wiu@multisupport.ai",
+    "agent": "Billing",
+    "ticket": {
+      "ticket_id": "MS-83086",
+      "department": "Billing",
+      "agent": "Billing",
+      "status": "Open",
+      "priority": "High",
+      "sentiment": "Negative",
+      "timeline": [
+        {
+          "status": "Open",
+          "message": "Ticket created automatically by AI Support routing.",
+          "timestamp": "2026-07-18 05:21:39.072682"
+        }
+      ],
+      "created_at": "2026-07-18 05:21:39.072828",
+      "updated_at": "2026-07-18 05:21:39.072836",
+      "email": "guest_fx839wiu@multisupport.ai",
+      "user_message": "i have payment issue ",
+      "sla_deadline": "2026-07-18 09:21:39.072857"
+    },
+    "user_message": "i have payment issue ",
+    "ai_reply": "I'm so sorry to hear that you're experiencing a payment issue. I'd be happy to help you resolve it. Can you please tell me more about the issue you're facing? For example, what error message are you seeing, or what's happening when you try to make a payment?\n\nWe accept payments using Visa, MasterCard, UPI, and PayPal. If your payment is failing, it might be due to a variety of reasons. I can try to help you troubleshoot the issue or provide alternative payment options.\n\nIf you've already tried making a payment and it's failed, please don't worry. We're here to help. Please let me know how I can assist you further.",
+    "confidence_score": 90,
+    "timestamp": "2026-07-18 05:21:39.083209",
+    "_id": "mock_3"
+  },
+  {
+    "conversation_id": "404c7d6d-c9bf-469e-9264-817c23929428",
+    "email": "guest_fx839wiu@multisupport.ai",
+    "agent": "General",
+    "ticket": null,
+    "user_message": "i want to know the company policy",
+    "ai_reply": "I'm happy to help you with your query. However, I'm a Customer Support Assistant, and I may not have access to the company's overall policy. Our support is mainly focused on providing assistance with customer-related issues. \n\nIf you're looking for information on company policies, I would recommend reaching out to the relevant department, such as HR or Administration, as they would be better equipped to provide you with the information you're seeking.\n\nI can tell you that our support team is available to assist you from Monday to Friday, 9 AM to 6 PM, and you can contact us through email or live chat.\n\nI'm sorry, I don't have that information in my knowledge base.",
+    "confidence_score": 90,
+    "timestamp": "2026-07-18 05:24:38.624638",
+    "_id": "mock_4"
+  },
+  {
+    "conversation_id": "49450da2-10ff-4ccd-b23f-b2810eb5e66d",
+    "email": "guest_ui801zib@multisupport.ai",
+    "agent": "General",
+    "ticket": null,
+    "user_message": "can i get company privacy and policy",
+    "ai_reply": "Our company's privacy and policy are important to us. I'm sorry, I don't have that information in my knowledge base. For the most accurate and up-to-date information on our company's privacy and policy, I recommend visiting our website or contacting our support team through email or live chat. They will be happy to provide you with the necessary information.",
+    "confidence_score": 80,
+    "timestamp": "2026-07-18 08:20:05.145550",
+    "_id": "mock_5"
+  },
+  {
+    "conversation_id": "49450da2-10ff-4ccd-b23f-b2810eb5e66d",
+    "email": "guest_ui801zib@multisupport.ai",
+    "agent": "General",
+    "ticket": null,
+    "user_message": "can i get the contact information ",
+    "ai_reply": "Our support is available Monday to Friday, 9 AM to 6 PM. You can contact us through email or live chat. I don't have the specific email address or live chat link in my knowledge base, but you can try checking our company website for the \"Contact Us\" section, which should have the necessary information.",
+    "confidence_score": 80,
+    "timestamp": "2026-07-18 08:21:07.174466",
+    "_id": "mock_6"
+  },
+  {
+    "conversation_id": "49450da2-10ff-4ccd-b23f-b2810eb5e66d",
+    "email": "guest_ui801zib@multisupport.ai",
+    "agent": "General",
+    "ticket": null,
+    "user_message": "what is your contact number ",
+    "ai_reply": "I'm sorry, I don't have that information in my knowledge base. However, I can suggest some alternative contact channels. For regulatory inquiries, exercises of user privacy rights, compliance evaluation audits, or structural comments regarding our data governance frameworks, you can submit a formal request to our Data Protection Team at privacy@technovasolutions.com [Source: ContactInformations.pdf]. For shipping and fulfillment-related queries, you can reach out to our Dedicated Operations Desk at fulfillment@technova.solutions [Source: ShippingPolicy.pdf].",
+    "confidence_score": 90,
+    "timestamp": "2026-07-18 08:41:38.636955",
+    "_id": "mock_7"
+  },
+  {
+    "conversation_id": "49450da2-10ff-4ccd-b23f-b2810eb5e66d",
+    "email": "guest_ui801zib@multisupport.ai",
+    "agent": "General",
+    "ticket": null,
+    "user_message": "can i get contact informations ",
+    "ai_reply": "For regulatory inquiries, exercises of user privacy rights, compliance evaluation audits, or structural comments regarding our data governance frameworks, you can submit a formal request to our Data Protection Team at privacy@technovasolutions.com [Source: ContactInformations.pdf]. \n\nFor statutory corporate contact channels, you can also reach out to our Corporate Privacy Office at the same email address: privacy@technovasolutions.com, or visit our Secure Regulatory Dashboard at technovasolutions.com/privacy-center.\n\nAdditionally, for legal compliance and other inquiries, you can contact our Legal Compliance Department at legal@technovasolutions.com, or visit our Corporate Communication Portal at technovasolutions.com/legal [Source: TroubleshootingGuid.pdf].",
+    "confidence_score": 90,
+    "timestamp": "2026-07-18 08:47:40.987873",
+    "_id": "mock_8"
+  },
+  {
+    "conversation_id": "49450da2-10ff-4ccd-b23f-b2810eb5e66d",
+    "email": "guest_ui801zib@multisupport.ai",
+    "agent": "General",
+    "ticket": null,
+    "user_message": "hi reply shortly ",
+    "ai_reply": "You can contact us through email or live chat, Monday to Friday, 9 AM to 6 PM.",
+    "confidence_score": 90,
+    "timestamp": "2026-07-18 09:31:36.059381",
+    "_id": "mock_9"
+  }
+]

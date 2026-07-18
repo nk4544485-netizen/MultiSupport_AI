@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { chat, auth } from "./services/api";
 import Login from "./Login";
 import Register from "./Register";
-import Dashboard from "./Dashboard";
+import Dashboard from "./dashboard";
 import AdminDashboard from "./admindashboard"; // File name in directory is lowercase admindashboard.jsx
 import DocumentManager from "./DocumentManager";
 import MarkdownRenderer from "./components/MarkdownRenderer";

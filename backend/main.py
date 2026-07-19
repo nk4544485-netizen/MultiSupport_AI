@@ -18,7 +18,12 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173",
         "http://127.0.0.1:5173",
+
+        # Your old Vercel deployment
         "https://multi-support-ai-delta.vercel.app",
+
+        # Your current Vercel deployment
+        "https://multi-support-b6n9csppj-nk4544485-4323s-projects.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
